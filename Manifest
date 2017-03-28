@@ -1,0 +1,27 @@
+# [1] CleanupTemp.py   => Load Temperature Data from HDFS.
+#                        Process as an RDD.  Also processing as DataFrame.
+# [2] Chunks.py        => Load Accelerometer Data from HDFS.  Process as Dataframe
+# [3] AccProcessing.py => Accelerometer Dataframe processing.
+# [4] Cleanup.py       => Simpleplotting of Accelerometer data from RDD
+# [5] Datafram.py      => Example code for working with Dataframe creation
+# [6] signalProc.py    => Sample code for dealing with Signal data and FFT
+# [7] tests.py         => Scratchpad to work out one-off techniques
+# [8] WindowTesting.py => Scratchpad to work out how to use pyspark.sql.function.window
+
+# Experiments => Folder Reference Samples and Experiments
+# [1] Prototype Wave Processing.py => Sample code for dealing with Acc data using FFT.
+# [2] Roller Bearing Data.py       => Sample code for dealing with FFT and Bearing IMS data. No dataset in this cluster.
+
+# Maincode => Location for finalized code
+# [1] LoadDataFromS3.py => Code to load data from S3 and store in HDFS
+
+#_________________________________________________________
+#To Do List
+#_________________________________________________________
+
+# [1] Refactor CleanupTemp.py to contain just the processing code to DF like
+#     AccProcessing.py
+# [2] Write Code to union DataFrames for Temp and Acc Data
+# [3] Need to calculate the rate of temp change over the interval [(max - min)/interval]
+# [4] Need to calculate the FFT power and freq for each interval
+# [5] Need to add a column for remaining useful life to each interval for training set
